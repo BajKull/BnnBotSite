@@ -1,0 +1,12 @@
+.navbarLogo {
+  width: 32px;
+}
+
+.navbarOptional {
+  width: 24px;
+  opacity: 0.6;
+}
+
+.navbarOptional:hover {
+  opacity: 1;
+}
