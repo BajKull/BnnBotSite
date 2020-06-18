@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 35px;
+  padding: 50px;
 }
 
 .mainHeader {
@@ -23,7 +23,7 @@
   width: 200px;
   border: none;
   background: rgb(52, 235, 128);
-  font-size: 24px;
+  font-size: 32px;
 }
 
 

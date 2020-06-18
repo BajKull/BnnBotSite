@@ -1,0 +1,101 @@
+.description {
+  margin-top: 50px;
+  padding-top: 50px;
+  background: rgb(55, 62, 70);
+  display: flex;
+  flex-direction: column;
+}
+
+.desdiv {
+  display: flex;
+  position: relative;
+  width: 60%;
+  margin: 50px 20% 50px 20%;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.desdiv img {
+  border-radius: 10px;
+}
+
+.destxt {
+  width: 30%;
+  padding: 25px;
+}
+
+.desInactive {
+  display: flex;
+  position: relative;
+  width: 60%;
+  margin: 50px 20% 50px 20%;
+  opacity: 0;
+}
+
+.des1 h1, .des3 h1, .des5 h1 {
+  color: rgb(167, 55, 219);
+}
+
+.des1 p, .des3 p, .des5 p {
+  color: rgb(174, 108, 204);
+}
+
+.des2 h1, .des4 h1 {
+  color: rgb(211, 219, 55);
+}
+
+.des2 p, .des4 p {
+  color: rgb(183, 189, 74);
+}
+
+@media only screen and (max-width: 1550px) {
+  .desdiv img {
+    margin: 0 10% 0 10%;
+    width: 80%;
+    height: auto;
+  }
+
+  .destxt {
+    width: 100%;
+    text-align: center;
+  }
+
+  .desdiv {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .desInactive {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .des2, .des4 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+}
+
+@media only screen and (max-width: 1000px) {
+
+  .desdiv {
+    width: 100%;
+    margin: 0;
+  }
+
+  .desInactive {
+    width: 100%;
+    margin: 0;
+  }
+
+  .destxt {
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+
+  .desdiv img {
+    width: 100%;
+    margin: 0;
+  }
+}

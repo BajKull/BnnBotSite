@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import LogoIcon from '../icons/logo.png'
+import LogoIcon from '../../icons/logo.png'
 
 export class Main extends Component {
   render() {
