@@ -1,0 +1,95 @@
+.commands {
+  width: 80%;
+  margin: 50px 10% 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.commandsdiv {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background: rgb(240, 240, 240);
+  padding: 15px;
+  border-radius: 5px;
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.commandsdiv h1 {
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.command {
+  background: rgb(230, 230, 230);
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.command:hover {
+  background: rgb(220, 220, 220);
+}
+
+.command p {
+  margin-bottom: 0;
+}
+
+.commandTabs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 10%;
+}
+
+.commandTabs button {
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 15px 10px 15px;
+  background: rgb(220, 220, 220);
+  width: 100px;
+  transition: 0.2s;
+}
+
+.commandsActive {
+  background: rgb(167, 55, 219) !important;
+  color: white !important;
+}
+
+.commandTabs button:hover {
+  background: rgb(205, 151, 229);
+}
+
+.disclaimer {
+  margin-top: 10px;
+  font-size: 0.75em;
+  color: rgb(180, 180, 180);
+  font-weight: 350;
+  margin-left: 10%;
+}
+
+@media only screen and (max-width: 500px) {
+  .commands {
+    width: 100%;
+    margin: 25px 0 0 0;
+  }
+
+  .commandTabs {
+    display: contents;
+    width: 80%;
+  }
+
+  .commandsdiv {
+    width: 90%;
+    margin: 0 5% 0 5%;
+  }
+
+  .disclaimer {
+    margin: 15px 0 0 0;
+  }
+}
