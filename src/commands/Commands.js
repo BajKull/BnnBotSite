@@ -4,6 +4,7 @@ import Gambling from "./command/Gambling.js";
 import Fighting from "./command/Fighting.js";
 import Pictures from "./command/Pictures.js";
 import Money from "./command/Money.js";
+import CommandList from "./command/Commandlist.js";
 
 import "./Commands.css";
 
@@ -32,11 +33,11 @@ export default function Commands() {
         <button onClick={(e) => btnClick(e, "pictures")}> Pictures </button>
         <button onClick={(e) => btnClick(e, "money")}> Money </button>
       </div>
-      {key === "utility" && <Utility />}
-      {key === "gambling" && <Gambling />}
-      {key === "fighting" && <Fighting />}
-      {key === "pictures" && <Pictures />}
-      {key === "money" && <Money />}
+      {key === "utility" && <Utility commands={CommandList.utility} />}
+      {key === "gambling" && <Gambling commands={CommandList.gambling} />}
+      {key === "fighting" && <Fighting commands={CommandList.fighting} />}
+      {key === "pictures" && <Pictures commands={CommandList.pictures} />}
+      {key === "money" && <Money commands={CommandList.money} />}
       <p className="disclaimer">
         Detailed description through command{" "}
         <b>

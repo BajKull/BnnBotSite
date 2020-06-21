@@ -1,26 +1,13 @@
-import React, { Component } from "react";
+import React from "react";
+import Command from "./Command.js";
 
-export class Pictures extends Component {
-  render() {
-    return (
-      <div className="commandsdiv">
-        <h1> Pictures </h1>
-
-        <div className="command">
-          <h6> pic </h6>
-          <p> Sends you a picture of an animal. </p>
-        </div>
-        <div className="command">
-          <h6> piclist </h6>
-          <p> Sends you a list of animals the bot can send. </p>
-        </div>
-        <div className="command">
-          <h6> porn </h6>
-          <p> Sends you naughty pictures. </p>
-        </div>
-      </div>
-    );
-  }
+export default function Pictures(props) {
+  return (
+    <div className="commandsdiv">
+      <h1> Pictures </h1>
+      {props.commands.map((com) => (
+        <Command key={com.title} command={com} />
+      ))}
+    </div>
+  );
 }
-
-export default Pictures;
