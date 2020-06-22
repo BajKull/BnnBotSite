@@ -1,0 +1,116 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutBg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(80% 0, 100% 0, 100% 100%, 20% 100%);
+  background-color: rgba(167, 55, 219, 0.02);
+  z-index: -1;
+}
+
+.about h1 {
+  font-size: 4em;
+  margin: 25px 25px 50px 25px;
+}
+
+.cards {
+  display: inline-flex;
+  margin-top: -4%;
+}
+
+.aboutCard {
+  margin: 5%;
+  width: 25%;
+  padding: 50px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 0 5px 0;
+}
+
+.aboutCard img {
+  width: 64px;
+  margin: 25px auto 25px auto;
+  display: block;
+}
+
+.aboutCard h3 {
+  text-align: center;
+  color: rgb(167, 55, 219);
+  margin-bottom: 25px;
+}
+
+.middleLine {
+  position: relative;
+  border-top: 2px dashed black;
+  width: 66.7%;
+  height: 150px;
+  margin-top: 50px;
+  animation-duration: 1.5s;
+  animation-name: fade;
+}
+
+.topVertLine {
+  position: absolute;
+  height: 47.5%;
+  left: 50%;
+  top: -50%;
+  border-left: 2px dashed black;
+}
+
+.bottomVertLine {
+  position: absolute;
+  height: 100%;
+  top: 2.5%;
+  left: 50%;
+  border-left: 2px dashed black;
+}
+
+.rightLine {
+  position: absolute;
+  height: 100%;
+  top: 2.5%;
+  right: 0;
+  border-left: 2px dashed black;
+}
+
+.leftLine {
+  position: absolute;
+  height: 100%;
+  top: 2.5%;
+  left: 0;
+  border-left: 2px dashed black;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    width: 25%;
+  }
+  to {
+    opacity: 1;
+    width: 66.7%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .middleLine {
+    display: none;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 10% 0 10%;
+  }
+
+  .aboutCard {
+    width: 100%;
+  }
+}

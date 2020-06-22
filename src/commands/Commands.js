@@ -21,6 +21,7 @@ export default function Commands() {
 
   return (
     <div className="commands">
+      <div className="aboutBg"></div>
       <div className="commandTabs">
         <button
           className="commandsActive"

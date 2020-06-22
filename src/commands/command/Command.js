@@ -5,7 +5,7 @@ export default function Command(props) {
   const popover = (
     <Popover id="popover-basic">
       <Popover.Title as="h3">{props.command.title}</Popover.Title>
-      <Popover.Content>{props.command.usage}</Popover.Content>
+      <Popover.Content>Example use: {props.command.usage}</Popover.Content>
     </Popover>
   );
 
