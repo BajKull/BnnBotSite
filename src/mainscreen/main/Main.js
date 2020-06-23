@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import LogoIcon from "../../icons/logo.png";
 import ArrowIcon from "./arrow.svg";
-import * as Scroll from "react-scroll";
+import { scroller } from "react-scroll";
+
+import SwordIcon from "../../icons/sword.svg";
+import MoneyIcon from "../../icons/money.svg";
+import GamblingIcon from "../../icons/gambling.svg";
 
 export class Main extends Component {
   scrollDown = () => {
-    const scroller = Scroll.scroller;
-    scroller.scrollTo("descriptionScroll", {
+    const sc = scroller;
+    sc.scrollTo("descriptionScroll", {
       duration: 750,
       delay: 50,
       smooth: true,
@@ -17,9 +21,27 @@ export class Main extends Component {
   render() {
     return (
       <div className="main">
+        <div className="aboutBg"></div>
         <h1 className="mainTitle"> Bnn Bot </h1>
         <img className="mainLogo" src={LogoIcon} alt="logo" />
-        <h3 className="mainHeader">Fight, earn money, gamble and many more!</h3>
+        <h3 className="mainHeader">
+          <span className="redText">
+            {" "}
+            <img src={SwordIcon} alt="" className="slangImage delay10" />
+            Fight,
+          </span>{" "}
+          <span className="greenText">
+            {" "}
+            <img src={MoneyIcon} alt="" className="slangImage delay20" />
+            earn money,
+          </span>{" "}
+          <span className="purpleText">
+            {" "}
+            <img src={GamblingIcon} alt="" className="slangImage delay30" />
+            gamble
+          </span>{" "}
+          and many more!
+        </h3>
         <button className="mainInvite"> Invite me! </button>
         <img
           className="arrowIcon"

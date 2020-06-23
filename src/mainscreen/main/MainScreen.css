@@ -19,6 +19,8 @@
   text-align: center;
   text-transform: uppercase;
   padding: 25px;
+  margin-top: 35px;
+  margin-bottom: 35px;
 }
 
 .mainLogo {
@@ -38,15 +40,74 @@
 .arrowIcon {
   margin-top: 150px;
   width: 64px;
+  cursor: pointer;
 }
 
+.redText {
+  color: red;
+  position: relative;
+}
+
+.greenText {
+  color: rgb(48, 156, 77);
+  position: relative;
+}
+
+.purpleText {
+  color: rgb(167, 55, 219);
+  position: relative;
+}
+
+.slangImage {
+  width: 64px;
+  position: absolute;
+  top: -64px;
+  left: 50%;
+  margin-left: -32px;
+  opacity: 0;
+  animation-name: slangIconAnimation;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+}
+
+.delay10 {
+  animation-delay: 5s;
+}
+
+.delay20 {
+  animation-delay: 10s;
+}
+
+.delay30 {
+  animation-delay: 15s;
+}
 .mainInvite:hover {
   background: rgb(59, 255, 140);
+}
+
+@keyframes slangIconAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: rotate(0) scale(1);
+  }
+  15% {
+    opacity: 0;
+    transform: rotate(-540deg) scale(0);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
   .main {
     padding: 10px;
+  }
+
+  .mainHeader {
+    margin: 0;
   }
 
   .mainInvite {

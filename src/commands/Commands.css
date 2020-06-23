@@ -20,6 +20,8 @@
 .commandsdiv h1 {
   text-align: center;
   padding-bottom: 25px;
+  animation-name: fadeCommand;
+  animation-duration: 0.5s;
 }
 
 .command {
@@ -30,6 +32,8 @@
   margin-bottom: 5px;
   transition: 0.3s;
   cursor: pointer;
+  animation-name: fadeCommand;
+  animation-duration: 0.5s;
 }
 
 .command:hover {
@@ -72,6 +76,15 @@
   color: rgb(180, 180, 180);
   font-weight: 350;
   margin-left: 10%;
+}
+
+@keyframes fadeCommand {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media only screen and (max-width: 500px) {

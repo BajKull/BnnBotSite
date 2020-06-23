@@ -9,36 +9,41 @@ import "./Description.css";
 
 export class Description extends Component {
   calculateViewport = () => {
-    const location = window.scrollY + window.innerHeight;
-    if (location >= 1050) {
+    const el1 = document.getElementsByClassName("des1")[0];
+    const el2 = document.getElementsByClassName("des2")[0];
+    const el3 = document.getElementsByClassName("des3")[0];
+    const el4 = document.getElementsByClassName("des4")[0];
+    const el5 = document.getElementsByClassName("des5")[0];
+    const windowHeight = window.innerHeight;
+    if (el1.getBoundingClientRect().y - windowHeight <= -50) {
       document
         .getElementsByClassName("des1")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des1")[0].classList.add("desdiv");
     }
 
-    if (location >= 1400) {
+    if (el2.getBoundingClientRect().y - windowHeight <= -50) {
       document
         .getElementsByClassName("des2")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des2")[0].classList.add("desdiv");
     }
 
-    if (location >= 1850) {
+    if (el3.getBoundingClientRect().y - windowHeight <= -50) {
       document
         .getElementsByClassName("des3")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des3")[0].classList.add("desdiv");
     }
 
-    if (location >= 2500) {
+    if (el4.getBoundingClientRect().y - windowHeight <= -50) {
       document
         .getElementsByClassName("des4")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des4")[0].classList.add("desdiv");
     }
 
-    if (location >= 2900) {
+    if (el5.getBoundingClientRect().y - windowHeight <= -50) {
       document
         .getElementsByClassName("des5")[0]
         .classList.remove("desInactive");
