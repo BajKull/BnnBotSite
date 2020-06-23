@@ -4,40 +4,41 @@ import GambleImage from "../../icons/gamble.png";
 import ClassImage from "../../icons/class.png";
 import HeistImage from "../../icons/heist.png";
 import AnimalImage from "../../icons/pic.png";
+import { Element } from "react-scroll";
 import "./Description.css";
 
 export class Description extends Component {
   calculateViewport = () => {
     const location = window.scrollY + window.innerHeight;
-    if (location >= 750) {
+    if (location >= 1050) {
       document
         .getElementsByClassName("des1")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des1")[0].classList.add("desdiv");
     }
 
-    if (location >= 1200) {
+    if (location >= 1400) {
       document
         .getElementsByClassName("des2")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des2")[0].classList.add("desdiv");
     }
 
-    if (location >= 1700) {
+    if (location >= 1850) {
       document
         .getElementsByClassName("des3")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des3")[0].classList.add("desdiv");
     }
 
-    if (location >= 2300) {
+    if (location >= 2500) {
       document
         .getElementsByClassName("des4")[0]
         .classList.remove("desInactive");
       document.getElementsByClassName("des4")[0].classList.add("desdiv");
     }
 
-    if (location >= 2700) {
+    if (location >= 2900) {
       document
         .getElementsByClassName("des5")[0]
         .classList.remove("desInactive");
@@ -51,9 +52,14 @@ export class Description extends Component {
     this.calculateViewport();
   }
 
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.calculateViewport);
+  }
+
   render() {
     return (
       <div className="description" onScroll={() => this.calculateViewport()}>
+        <Element name="descriptionScroll" />
         <div className="des1 desInactive">
           <div className="destxt">
             <h1 className="descriptionTitle"> Pick your class </h1>
