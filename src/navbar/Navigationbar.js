@@ -35,7 +35,7 @@ export class Navigationbar extends Component {
                 alt="discord"
               />
             </Nav.Link>
-            <Nav.Link href="#invlink">
+            <Nav.Link href="https://discord.com/api/oauth2/authorize?client_id=699018077953851413&permissions=223296&scope=bot">
               <img
                 className="navbarImg navbarOptional"
                 src={DiscordIcon}

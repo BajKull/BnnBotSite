@@ -42,7 +42,9 @@ export class Main extends Component {
           </span>{" "}
           and many more!
         </h3>
-        <button className="mainInvite"> Invite me! </button>
+        <a href="https://discord.com/api/oauth2/authorize?client_id=699018077953851413&permissions=223296&scope=bot">
+          <button className="mainInvite"> Invite me! </button>
+        </a>
         <img
           className="arrowIcon"
           src={ArrowIcon}

@@ -124,4 +124,8 @@
   .arrowIcon {
     margin-top: 20px;
   }
+
+  .slangImage {
+    display: none;
+  }
 }
