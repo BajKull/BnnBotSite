@@ -45,30 +45,40 @@
   margin-bottom: 25px;
 }
 
+.topVertLine {
+  position: absolute;
+  height: 0;
+  left: 50%;
+  top: -50%;
+  border-left: 2px dashed black;
+  animation-name: fadeTop;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
+}
+
 .middleLine {
   position: relative;
   border-top: 2px dashed black;
   width: 66.7%;
   height: 150px;
   margin-top: 50px;
+  opacity: 0;
+  animation-name: fadeMid;
+  animation-fill-mode: forwards;
   animation-duration: 1.5s;
-  animation-name: fade;
-}
-
-.topVertLine {
-  position: absolute;
-  height: 47.5%;
-  left: 50%;
-  top: -50%;
-  border-left: 2px dashed black;
 }
 
 .bottomVertLine {
   position: absolute;
-  height: 100%;
+  height: 0%;
   top: 2.5%;
   left: 50%;
   border-left: 2px dashed black;
+  animation-name: fadeBottom;
+  animation-fill-mode: forwards;
+  animation-duration: 1.5s;
+  animation-delay: 1.5s;
 }
 
 .rightLine {
@@ -77,6 +87,11 @@
   top: 2.5%;
   right: 0;
   border-left: 2px dashed black;
+  opacity: 0;
+  animation-name: fadeBottom;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
 }
 
 .leftLine {
@@ -85,16 +100,43 @@
   top: 2.5%;
   left: 0;
   border-left: 2px dashed black;
+  opacity: 0;
+  animation-name: fadeBottom;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+  animation-duration: 1.5s;
 }
 
-@keyframes fade {
+@keyframes fadeMid {
   from {
     opacity: 0;
-    width: 25%;
+    margin-left: -2000px;
   }
   to {
     opacity: 1;
-    width: 66.7%;
+    margin-left: 0;
+  }
+}
+
+@keyframes fadeBottom {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@keyframes fadeTop {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 47.5%;
   }
 }
 

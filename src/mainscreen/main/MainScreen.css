@@ -23,6 +23,10 @@
   margin-bottom: 35px;
 }
 
+.main h3 {
+  font-size: 48px;
+}
+
 .mainLogo {
   padding: 25px;
   width: 256px;
@@ -30,7 +34,6 @@
 }
 
 .mainInvite {
-  width: 200px;
   border: none;
   background: rgb(52, 235, 128);
   font-size: 32px;
@@ -127,5 +130,14 @@
 
   .slangImage {
     display: none;
+  }
+
+  .mainLogo {
+    width: 184px;
+    height: 138px;
+  }
+
+  .main h3 {
+    font-size: 24px;
   }
 }
