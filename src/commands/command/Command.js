@@ -10,7 +10,7 @@ export default function Command(props) {
   );
 
   return (
-    <OverlayTrigger trigger="click" placement="top" overlay={popover}>
+    <OverlayTrigger placement="auto" overlay={popover}>
       <div className="command">
         <h5> {props.command.title} </h5>
         <p> {props.command.description} </p>
